@@ -10,7 +10,7 @@ function App() {
   const [prompt, setprompt] = useState("");     //Prompt question to OpenIA
   const [isLoading, setisLoading] = useState(false);     //Prompt question to OpenIA
   const [isTypeWriting, setisTypeWriting] = useState(false);     //If the typewriter effect is loading.
-  const [welcomeText, setwelcomeText] = useState("Didi AI is a digital diviner designed to provide helpful and informative responses to your questions and inquiries with the help of artificial intelligence.");
+  const [welcomeText, setwelcomeText] = useState("Adam AI is a chatgpt clone created by Akindel becayse he cannot afford chatgpt!! Seroiusly...😏");
   const [isTypingWelcome, setisTypingWelcome] = useState(true); //If the welcoming test is loading
 
   // Create configuration object
@@ -59,7 +59,7 @@ function App() {
 
       let response = await openai.createChatCompletion({ 
         
-        model: "gpt-4",
+        model: "gpt-3.5-turbo",
         temperature: 0,
         max_tokens: 4000,
         top_p: 0,
@@ -106,10 +106,10 @@ function App() {
       {/* Navbar */}
       <nav className="nav-header font-bold pl-5 pr-5">   
         <div className='nav-div pb-4'>
-          Didi AI     
-          {/* Link to twitter account  */}
-          <a href='https://twitter.com/Divine_Er' rel="noreferrer" target="_blank" > 
-            <span className='float-right'> <i className="fa fa-brands fa-twitter text-gray-400"></i></span>
+          Adam AI     
+          {/* Link to my account  */}
+          <a href='https://github.com/heroboyCloud' rel="noreferrer" target="_blank" > 
+            <span className='float-right'> <i className="fa fa-brands fa-github text-gray-400"></i></span>
           </a>
           {/* Link to codebase  */}
           <a href='https://github.com/divinejoshua/openai-js' rel="noreferrer" target="_blank" >
@@ -125,9 +125,9 @@ function App() {
         <br></br><br></br><br></br><br></br>
         <div className='main pr-5 pl-5'>
 
-            {/* About Didi AI  */}         
+            {/* About Adam AI  */}         
               <div className='leading-loose text-sm text-gray-700'>
-                <div className='font-bold text-pink-500'>Didi</div>
+                <div className='font-bold text-pink-500'>Adam</div>
                 {isTypingWelcome ?
                   <Typewriter
                       onInit={(typewriter) => {
@@ -160,7 +160,7 @@ function App() {
                     post.role ==='user' ?
                     <div className='mt-4 text-blue-500 font-bold'>Me</div>
                     :
-                    <div className='mt-4 text-pink-500 font-bold'>Didi</div>
+                    <div className='mt-4 text-pink-500 font-bold'>Adam</div>
                   }
                   
 
@@ -186,7 +186,7 @@ function App() {
                 {/* If request is loading  */}
                 { isLoading && 
                 <div>
-                  <div className='mt-4 text-pink-500 font-bold'>Didi</div>
+                  <div className='mt-4 text-pink-500 font-bold'>Adam</div>
                   <span className='text-gray-400'>Searching...</span>
                 </div>
                 }
@@ -205,7 +205,7 @@ function App() {
               type="text" 
               required
               autoFocus={true}
-              placeholder='Ask Didi anything...'
+              placeholder='Ask Adam anything...'
               onChange = {e => setprompt(e.target.value)}
               value={prompt}
               className='w-full text-gray-700 text-sm p-2 pt-3 pb-3 pr-5 pl-5 rounded border border-gray-300 focus:outline-none focus:border-blue-500 focus:ring-blue-500 focus:ring-0.5 focus:border-100 transition duration-0 hover:duration-150'
