@@ -15,7 +15,7 @@ function App() {
 
   // Create configuration object
   const configuration = new Configuration({
-    apiKey: process.env.REACT_APP_OPENAI_API_KEY,
+    apiKey: process.env.OPENAI_API_KEY,
   });
 
 
