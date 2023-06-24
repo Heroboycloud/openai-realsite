@@ -10,7 +10,7 @@ function App() {
   const [prompt, setprompt] = useState("");     //Prompt question to OpenIA
   const [isLoading, setisLoading] = useState(false);     //Prompt question to OpenIA
   const [isTypeWriting, setisTypeWriting] = useState(false);     //If the typewriter effect is loading.
-  const [welcomeText, setwelcomeText] = useState("Adam AI is a chatgpt clone created by Akindel becayse he cannot afford chatgpt!! Seroiusly...😏");
+  const [welcomeText, setwelcomeText] = useState("Adam AI is a chatgpt clone created by Akindel because he cannot afford chatgpt!! Seriously...😏");
   const [isTypingWelcome, setisTypingWelcome] = useState(true); //If the welcoming test is loading
 
   // Create configuration object
@@ -66,6 +66,7 @@ function App() {
         frequency_penalty: 0,
         presence_penalty: 0,
         stop: ["{}"],
+	stream: true,
         messages: newMessages,
       });
 
