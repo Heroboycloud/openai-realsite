@@ -188,7 +188,7 @@ function App() {
                 { isLoading && 
                 <div>
                   <div className='mt-4 text-pink-500 font-bold'>Adam</div>
-                  <span className='text-gray-400'>Searching...</span>
+                  <span className='text-gray-400'>typing...</span>
                 </div>
                 }
                 
@@ -220,7 +220,7 @@ function App() {
                 type="submit"
                 disabled={isLoading}
                 className={(isLoading ? 'none bg-gray-200 hover:bg-gray-200 text-gray-500 ' : ' bg-blue-500  hover:bg-blue-700') + 'none float-right rounded mt-7 text-sm text-white font-bold py-2 px-4 '}>
-                Send <i className="fa-regular fa-paper-plane"></i>
+                Ask <i className="fa-regular fa-paper-plane"></i>
               </button>
 
 
