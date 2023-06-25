@@ -66,7 +66,6 @@ function App() {
         frequency_penalty: 0,
         presence_penalty: 0,
         stop: ["{}"],
-	stream: true,
         messages: newMessages,
       });
 
