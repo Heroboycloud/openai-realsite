@@ -1,10 +1,13 @@
-steps:
-  – name: Checkout repository
-    uses: actions/checkout@v3
-  – name: Read package.json
-    id: package
-    uses: juliangruber/read-file-action@v1
-    with:
-      path: ./package.json
-  – name: Echo package.json
-    run: echo “${{ steps.package.outputs.content }}”
+name: Testing actions on AdamAi
+run-name: ${{ github.actor }} is running action in AdamAi
+on: [push]
+jobs:
+  New Action to run:
+   runs-on: ubuntu-latest
+   steps:
+    - uses: action/checkout@v3
+    - run: echo "This is running on ${{ runner.os}}"
+    - run: echo "It was triggered by ${{github.event_name}} "
+    - run: echo " ${{github.repository}} is on ${{github.ref}} branch"
+    - name: Just random
+      run: echo "Good day"
