@@ -2,7 +2,7 @@ name: Testing actions on AdamAi
 run-name: ${{ github.actor }} is running action in AdamAi
 on: [push]
 jobs:
-  New Action to run:
+  My_Actions:
    runs-on: ubuntu-latest
    steps:
     - uses: action/checkout@v3
