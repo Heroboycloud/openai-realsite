@@ -5,7 +5,6 @@ jobs:
   My_Actions:
    runs-on: ubuntu-latest
    steps:
-    - uses: action/checkout@v3
     - run: echo "This is running on ${{ runner.os}}"
     - run: echo "It was triggered by ${{github.event_name}} "
     - run: echo " ${{github.repository}} is on ${{github.ref}} branch"
